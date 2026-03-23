@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e); /* Darker space/cyber theme */
+    background-attachment: fixed;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* Glassmorphism Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+}
+
+.glass-nav ul { display: flex; list-style: none; }
+.glass-nav ul li { margin-left: 30px; }
+.glass-nav a { color: white; text-decoration: none; font-weight: bold; }
+
+/* Sections */
+section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-card {
+    padding: 50px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* --- THE TERMINAL / REVIEW BOX SECTION --- */
+
+.review-container {
+    margin-top: 50px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #afffaf; /* Cyber Green Glow */
+    background: rgba(0, 0, 0, 0.6); 
+    animation: borderPulse 4s infinite ease-in-out;
+}
+
+@keyframes borderPulse {
+    0% { border-color: rgba(175, 255, 175, 0.3); box-shadow: 0 0 10px rgba(175, 255, 175, 0.1); }
+    50% { border-color: rgba(175, 255, 175, 1); box-shadow: 0 0 20px rgba(175, 255, 175, 0.3); }
+    100% { border-color: rgba(175, 255, 175, 0.3); box-shadow: 0 0 10px rgba(175, 255, 175, 0.1); }
+}
+
+/* The text typed INSIDE the box */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1

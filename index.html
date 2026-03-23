@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Log | 0x_SECURE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">0x_SECURE</div>
+        <ul>
+            <li><a href="#welcome">The Origin</a></li>
+            <li><a href="#journey">Timeline</a></li>
+            <li><a href="#assets">Crypto Stacks</a></li>
+            <li><a href="#review">Leave a Trace</a></li>
+        </ul>
+    </nav>
+
+    <section id="welcome" class="hero">
+        <div class="glass welcome-card">
+            <h1 class="glitch">Proof of Growth</h1>
+            <p>Documenting for evolution from web vulnerabilities to blockchain forensics.</p>
+            <div class="status-bar">Network State: <span class="online">ACTIVE_LEARNER</span></div>
+        </div>
+    </section>
+
+    <section id="journey" class="portfolio-section">
+        <h2 class="section-title">Cybersecurity Roadmap</h2>
+        <div class="projects-container">
+            <div class="glass project-card">
+                <div class="icon">🔍</div>
+                <h3>The Entry Point</h3>
+                <p>Started with HTB & TryHackMe. Mastered the OWASP Top 10 and earned my first bug bounty for a XSS discovery.</p>
+            </div>
+            <div class="glass project-card">
+                <div class="icon">🛡️</div>
+                <h3>Security Analyst</h3>
+                <p>Transitioned into SOC operations, learning to hunt threats and automate IR scripts using Python and Bash.</p>
+            </div>
+            <div class="glass project-card">
+                <div class="icon">🕵️‍♂️</div>
+                <h3>Web3 Auditor</h3>
+                <p>Current Focus: Analyzing Solidity smart contracts for reentrancy, overflow, and logic flaws.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="assets">Crypto Portfolio Focus</h2>
+        <div class="projects-container">
+            <div class="glass project-card">
+                <div class="icon">₿</div>
+                <h3>Store of Value</h3>
+                <p>Long-term BTC maximalist mindset with a focus on cold-storage security and multi-sig setups.</p>
+            </div>
+            <div class="glass project-card">
+                <div class="icon">💎</div>
+                <h3>DeFi & Alt-Layer</h3>
+                <p>Active participant in Ethereum L2 scaling solutions and liquidity provisioning on Uniswap V3.</p>
+            </div>
+        </div>
+
+        <div id="review" class="glass review-container">
+            <h3>Don't forget to leave the review</h3>
+            <p class="subtitle">suggest for any improment:</p>
+            <div class="input-group">
+                <input type="text" id="reviewerName" placeholder="Node Alias (Name)">
+                <textarea id="reviewText" placeholder="Enter message for the ledger..."></textarea>
+                <button onclick="submitReview()">submit</button>
+            </div>
+            <p id="reviewStatus"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
