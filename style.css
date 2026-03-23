@@ -1,180 +1,62 @@
-:root {
-    --primary-blue: #00d4ff;
-    --deep-navy: #0a192f;
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --text-main: #e6f1ff;
-    --text-dim: #8892b0;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-}
-
-body {
-    background-color: var(--deep-navy);
-    background-image: 
-        radial-gradient(at 0% 0%, rgba(0, 212, 255, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(118, 75, 162, 0.1) 0px, transparent 50%);
-    background-attachment: fixed;
-    color: var(--text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Glassmorphism Refined */
-.glass {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.glass:hover {
-    border: 1px solid rgba(0, 212, 255, 0.4);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* Navbar Modernization */
-.glass-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    z-index: 1000;
-    background: rgba(10, 25, 47, 0.85);
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--primary-blue);
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
-}
-
-.glass-nav ul { display: flex; list-style: none; }
-.glass-nav ul li { margin-left: 40px; }
-.glass-nav a { 
-    color: var(--text-dim); 
-    text-decoration: none; 
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: 0.3s;
-}
-.glass-nav a:hover { color: var(--primary-blue); }
-
-/* Hero Section */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.welcome-card {
-    padding: 60px;
-    text-align: center;
-    max-width: 800px;
-    border: 1px solid rgba(0, 212, 255, 0.2);
-}
-
-.glitch {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #fff 20%, var(--primary-blue) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Roadmap Grid */
-.portfolio-section {
-    padding: 100px 8%;
-}
-
+/* --- Global Text Centering --- */
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 50px;
-    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center; /* Centers the Heading */
     color: var(--primary-blue);
+    width: 100%;
 }
 
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 80px;
+.portfolio-section p {
+    text-align: center; /* Centers all descriptive text */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* --- Centering the Project Cards Content --- */
 .project-card {
     padding: 40px;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally in Flex */
+    justify-content: center;
+    text-align: center; /* Centers the text inside the card */
 }
 
 .project-card .icon {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: block;
+    width: 100%; /* Ensures the icon container takes full width for centering */
 }
 
-.project-card h3 { margin-bottom: 15px; color: #fff; }
-.project-card p { color: var(--text-dim); font-size: 0.95rem; }
-
-/* The Data Terminal (Review Box) */
+/* --- Centering the Review/Terminal Box --- */
 .review-container {
-    margin: 50px auto;
+    margin: 60px auto; /* Horizontal auto margins center the block itself */
     padding: 50px;
     max-width: 700px;
-    border-left: 4px solid var(--primary-blue);
-    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the input fields and button */
+    text-align: center;
+    border-left: none; /* Removed the left border for a centered look */
+    border-top: 4px solid var(--primary-blue); /* Moved accent to the top */
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 12px 0;
-    border-radius: 8px;
-    border: 1px solid var(--glass-border);
-    background: rgba(255, 255, 255, 0.05);
-    color: #fff;
-    outline: none;
-    transition: 0.3s;
+    width: 100%; /* Keeps inputs full width of the container */
+    text-align: center; /* Centers the typing cursor and text */
 }
 
-input:focus, textarea:focus {
-    border-color: var(--primary-blue);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-button {
-    background: var(--primary-blue);
-    color: var(--deep-navy);
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 700;
-    width: 100%;
-    margin-top: 20px;
-    transition: 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-button:hover {
-    background: #fff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-    transform: scale(1.02);
+/* --- Center adjustment for the Hero Section --- */
+.welcome-card p {
+    max-width: 500px;
+    margin: 0 auto 20px auto;
 }
