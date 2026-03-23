@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiran | Likings & Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">KIRAN</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#likings">Interests</a></li>
+            <li><a href="#review">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="likings" class="portfolio-section">
+        <h2 class="section-title">Core Interests</h2>
+        <div class="projects-container">
+            <div class="glass project-card">
+                <div class="icon">📊</div>
+                <h3>Predictive Analytics</h3>
+                <p>I find joy in building models that don't just show what happened, but predict what happens next.</p>
+            </div>
+            
+            <div class="glass project-card">
+                <div class="icon">🐍</div>
+                <h3>Python Scripting</h3>
+                <p>An avid lover of automation. If a task takes more than 10 minutes, I’d rather spend 2 hours coding it.</p>
+            </div>
+
+            <div class="glass project-card">
+                <div class="icon">🔍</div>
+                <h3>Data Forensics</h3>
+                <p>I enjoy the "detective work" of finding anomalies and hidden stories within millions of rows of data.</p>
+            </div>
+        </div>
+
+        <div id="review" class="glass review-container">
+            <h3>Collaborate with Kiran</h3>
+            <p class="subtitle">Have a data challenge or an improvement suggestion?</p>
+            <div class="input-group">
+                <input type="text" id="reviewerName" placeholder="Your Name/Company">
+                <textarea id="reviewText" rows="3" placeholder="Message..."></textarea>
+                <button onclick="submitReview()">LOG TO DATABASE 🚀</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
